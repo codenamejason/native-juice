@@ -1,0 +1,36 @@
+{
+  "name": "se-2",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/foundry",
+      "packages/reactnative"
+    ]
+  },
+  "scripts": {
+    "account": "yarn workspace @se-2/foundry account",
+    "chain": "yarn workspace @se-2/foundry chain",
+    "fork": "yarn workspace @se-2/foundry fork",
+    "deploy": "yarn workspace @se-2/foundry deploy",
+    "deploy:verify": "yarn workspace @se-2/foundry deploy:verify",
+    "compile": "yarn workspace @se-2/foundry compile",
+    "generate": "yarn workspace @se-2/foundry generate",
+    "foundry:lint": "yarn workspace @se-2/foundry lint",
+    "test": "yarn workspace @se-2/foundry test",
+    "postinstall": "husky install",
+    "precommit": "lint-staged",
+    "android": "yarn workspace @se-2/reactnative android",
+    "ios": "yarn workspace @se-2/reactnative ios",
+    "start": "yarn workspace @se-2/reactnative start",
+    "patch-ethers": "yarn workspace @se-2/reactnative patch-ethers"
+  },
+  "packageManager": "yarn@3.2.3",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "resolutions": {
+    "usehooks-ts@^2.7.2": "patch:usehooks-ts@npm:^2.7.2#./.yarn/patches/usehooks-ts-npm-2.7.2-fceffe0e43.patch"
+  }
+}
